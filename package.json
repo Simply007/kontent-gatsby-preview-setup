@@ -11,12 +11,12 @@
     "get-all": "npm run get-devkit && npm run get-preview-custom-element && npm run get-dev-site && npm run get-dev-source-plugin",
     "prepare-dev-site": "cd development-site && npm install",
     "prepare-dev-source-plugin": "cd development-site/plugins/@kentico/gatsby-source-kontent && npm install && npm run build",
+    "prepare-all": "npm run prepare-dev-site && npm run prepare-dev-source-plugin",
+    "set-up": "npm run get-all && npm run prepare-all",
     "run-site": "cd development-site && npm run develop-preview",
     "run-custom-element": "cd custom-element-devkit && npm start -- -hw"
   },
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "serve": "^11.2.0"
-  }
+  "devDependencies": {}
 }
