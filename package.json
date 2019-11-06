@@ -6,12 +6,13 @@
   "scripts": {
     "get-devkit": "git clone https://github.com/Kentico/custom-element-devkit.git",
     "get-preview-custom-element": "git clone https://github.com/Simply007/gatsby-preview-custom-element.git custom-element-devkit/client/custom-elements/gatsby-preview-custom-element",
-    "get-dev-site": "git clone https://github.com/Simply007/kontent-template-gatsby-landing-page-photon development-site",
+    "get-dev-site": "git clone --branch preview-functionality https://github.com/Simply007/kontent-template-gatsby-landing-page-photon development-site",
     "get-dev-source-plugin": "git clone --branch preview-functionality https://github.com/Kentico/gatsby-source-kontent.git ./development-site/plugins/@kentico/gatsby-source-kontent",
     "get-all": "npm run get-devkit && npm run get-preview-custom-element && npm run get-dev-site && npm run get-dev-source-plugin",
     "prepare-dev-site": "cd development-site && npm install",
     "prepare-dev-source-plugin": "cd development-site/plugins/@kentico/gatsby-source-kontent && npm install && npm run build",
-    "prepare-all": "npm run prepare-dev-site && npm run prepare-dev-source-plugin",
+    "prepare-devkit": "cd custom-element-devkit && npm install",
+    "prepare-all": "npm run prepare-dev-site && npm run prepare-dev-source-plugin && npm run prepare-devkit",
     "set-up": "npm run get-all && npm run prepare-all",
     "run-site": "cd development-site && npm run develop-preview",
     "run-custom-element": "cd custom-element-devkit && npm start -- -hw"
