@@ -1,0 +1,22 @@
+{
+  "name": "kontent-gatsby-preview-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "get-devkit": "git clone https://github.com/Kentico/custom-element-devkit.git",
+    "get-preview-custom-element": "git clone https://github.com/Simply007/gatsby-preview-custom-element.git custom-element-devkit/client/custom-elements/gatsby-preview-custom-element",
+    "get-dev-site": "git clone https://github.com/Simply007/kontent-template-gatsby-landing-page-photon development-site",
+    "get-dev-source-plugin": "git clone --branch preview-functionality https://github.com/Kentico/gatsby-source-kontent.git ./development-site/plugins/@kentico/gatsby-source-kontent",
+    "get-all": "npm run get-devkit && npm run get-preview-custom-element && npm run get-dev-site && npm run get-dev-source-plugin",
+    "prepare-dev-site": "cd development-site && npm install",
+    "prepare-dev-source-plugin": "cd development-site/plugins/@kentico/gatsby-source-kontent && npm install && npm run build",
+    "run-site": "cd development-site && npm run develop-preview",
+    "run-custom-element": "cd custom-element-devkit && npm start -- -hw"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^11.2.0"
+  }
+}
