@@ -1,7 +1,7 @@
 {
   "name": "kontent-gatsby-preview-setup",
   "version": "1.0.0",
-  "description": "",
+  "description": "Environment preparation for Gatsby preview development.",
   "main": "index.js",
   "scripts": {
     "get-devkit": "git clone https://github.com/Kentico/custom-element-devkit.git",
