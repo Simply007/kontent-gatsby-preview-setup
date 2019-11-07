@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "development-site"
+		},
+		{
+			"path": "custom-element-devkit\\client\\custom-elements\\gatsby-preview-custom-element"
+		}
+	],
+  "settings": {}
+}
